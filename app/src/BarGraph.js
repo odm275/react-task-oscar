@@ -7,7 +7,7 @@ function BarGraph({ dataHistory }) {
   // Parameters for Bar Graph
   const lowerLimit = -100;
   const upperLimit = 100;
-  const step = 50;
+  const step = 10;
   const ranges = createArrRange(lowerLimit, upperLimit, step);
 
   /*Bar Graph Set Up*/

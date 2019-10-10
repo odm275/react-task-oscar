@@ -1,44 +1,34 @@
-# Task Delivery
-```diff
-- Please don’t fork/branch or create pull-request from the repository. 
-- Clone it and email your solution back to us when you’re done.
-```
+## React Task
 
-# Task Description
-You have a server which returns random numbers via WebSocket ([socket.io](https://socket.io)) connection.
+Read more about this assessment here
+
+### Technologies Used
+
+- [React](https://reactjs.org/) - JavaScript front end framework(Create React App).
+- [React Chartjs 2](https://www.chartjs.org/) - React wrapper for Chart.js.
+- [React Toastify](https://www.npmjs.com/package/react-toastify) - For the threshold notifcation.
 
 
-You should implement the next:
+### Set up
 
-1. A line chart:
-    - **x-axis**: time of a received number (look at `timestamp` payload field)
-    - **y-axis**: number values
-2. A bar chart:
-    - **x-axis**: range categories (e.g. `-10 - 0`, `0 - 10`, `10 - 20` etc)
-    - **y-axis**: the amount of numbers in each category
-3. (Optional) An input called *"Alert threshold"*:
-    - a user should be able to enter a number
-    - if the random number received from the server is greater than the threshold - show an alert toast / snackbar with the number as the payload
-4. Design: we appreciate your own design decisions =)
+- To set up locally. Simply clone and run `yarn dev`.
+- Server runs by default on `port 3010`, create react app runs by default on `port 3000`, and socketIOClient is listening to `port 3010` in the client.
+- All components are under `/app/src/`.
+- There is a single file under `/app/helpers/` with some custom helpers functions that I used for the Bar Graph.
 
-Charts should be updated in real time. **Please**, consider code style best practices. 
 
-# Limitations
+### Additional Notes for the Bar Graph
 
-1. **React**
-2. Use [socket.io-client](https://socket.io/docs/client-api) to connect to the server
-3. That’s all
+- For the Bar Graph, feel free to change the initial parameters. In this case, the socket can only feed the range `[-100,100]`, so changing the step is the only one that will have a true effect.
+- For the Bar Graph, in the horizontal axis you will see the interval labels in the format `[x,x+step)`. This format follows logically as it would in math.
+    - For example, [3, 8) is the interval of real numbers between 3 and 8, including 3 and excluding 8.
+    - For example, [3, 8] is the interval of real numbers between 3 and 8, including 3 and including 8.
+- For the Bar Graph, if the range is not split evenly for some set of parameters, the left over range will have its own bar and range label. (Ex:lowerLimit = -100, upperLimit = 100, step = 9. Hence, the left over range is `[98,100]`).
+- For the Bar Graph, the y axis will grow as the max count grows.
 
-**P.S.** Feel free to use any module bundler, charts package, UI-kit etc you want. **BUT** please, leave some notes about the project setup.
+### Additional Notes for the Bar Alert Threshold
 
-# Server Setup
+- Put in a Number in the input field, and hit "Turn Alert Threshold On". You can also turn the alert off ... the alerts can really start firing like bullets depending on your number input.
 
-1. Install NodeJS
-2. In the project root folder run `yarn` / `npm install`
-3. Add `.env` file with the specified PORT (`3000` by default) env variable (look at `.env.sample` file)
-4. Run `yarn start` / `npm start`
-5. Now you can connect to the server via [socket.io-client](https://socket.io/docs/client-api):
-    - listen for `data` event
-    - the payload format is `{ value: <float>, timestamp: <integer> }`
-
-# Good luck!
+### Additional Notes 
+- Tomato is the best!

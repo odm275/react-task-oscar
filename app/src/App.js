@@ -64,8 +64,6 @@ function App() {
     }
   })
 
-  console.log('hey there')
-
   return (
     <>
       <ToastContainer />
@@ -74,7 +72,7 @@ function App() {
         <input
           className={styles.input}
           type="number"
-          name="Threshold"
+          name="Alert Threshold"
           value={threshold}
           onChange={handleChange}
           style={{width: '100%'}}
@@ -82,7 +80,7 @@ function App() {
         <input
           type="submit"
           className={[styles.inputThreshold, checkThresholdIsOn ? styles.inputThresholdStop : styles.inputThresholdStart].join(' ')}
-          value={checkThresholdIsOn ? "Turn Threshold Off" : "Turn Threshold On"}
+          value={checkThresholdIsOn ? "Turn Alert Threshold Off" : "Turn Alert Threshold On"}
         />
       </form>
       <LineGraph dataHistory={dataHistory} />
