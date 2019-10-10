@@ -1,0 +1,67 @@
+body {
+  background-color: tomato;
+  margin: 50px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.formInputLabel {
+  margin-bottom: 20px;
+}
+.container {
+  margin: 3rem auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.chartBackground {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.taskTitle {
+  text-align: center;
+}
+
+.inputThreshold{
+  border-radius: 5px;
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px; 
+}
+
+.inputThresholdStop{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.inputThresholdStart{
+  background-color: #00FF00;
+  border-color: #00FF00;
+}
+
+.formStyle{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input[type='number'] {
+  line-height: 27px;
+  opacity: 1;
+}
+
+.input[type='number']::-webkit-inner-spin-button {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.input[type=number]::-webkit-inner-spin-button, 
+.input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
