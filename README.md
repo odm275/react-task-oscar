@@ -27,8 +27,8 @@ Read more about this assessment here
 - For the Bar Graph, in the horizontal axis you will see the interval labels in the format `[x,x+step)`. This format follows logically as it would in math.
     - For example, [3, 8) is the interval of real numbers between 3 and 8, including 3 and excluding 8.
     - For example, [3, 8] is the interval of real numbers between 3 and 8, including 3 and including 8.
-- For the Bar Graph, if the range is not split evenly for some set of parameters, the left over range will have its own bar and range label. (Ex:lowerLimit = -100, upperLimit = 100, step = 9. Hence, the left over range is `[98,100]`).
-- For the Bar Graph, the y axis will grow as the max count grows.
+- For the Bar Graph, if the range is not split evenly for some set of parameters, the left over range will have its own bar and range label. (Ex:lowerLimit = -100, upperLimit = 100, step = 9. Hence, the left over range in this case is `[98,100]`).
+- For the Bar Graph, the y axis will grow as the max density grows.
 
 ### Additional Notes for the Bar Alert Threshold
 
