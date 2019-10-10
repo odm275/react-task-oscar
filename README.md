@@ -11,7 +11,11 @@ Read more about this assessment here
 
 ### Set up
 
-- To set up locally. Simply clone and run `yarn dev`.
+- To set up locally: 
+    1) Clone the repo.
+    2) Run `yarn` in the root to install server dependecies.
+    3) Then `cd app` and run `yarn` to install the client dependencies. 
+    4) Then `cd ..` back to the root level and run `yarn dev` to run the app(server, and client).
 - Server runs by default on `port 3010`, create react app runs by default on `port 3000`, and socketIOClient is listening to `port 3010` in the client.
 - All components are under `/app/src/`.
 - There is a single file under `/app/helpers/` with some custom helpers functions that I used for the Bar Graph.
